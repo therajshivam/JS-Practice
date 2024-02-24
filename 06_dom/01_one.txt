@@ -1,0 +1,204 @@
+// selecting an element
+
+document.getElementById('title')
+<hl id="title" Learning on Chai and Code</hl>
+** getElementById is a method 
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class', 'test')
+undefined
+** test is the value
+** this will always override the previous attribute 
+
+document.getElementById('title').setAttribute('class', 'test heading')
+undefined
+** this will prevent from overriding previous attribute 
+
+
+const title = document.getElementById('title')
+** declared this as a variable
+
+// adding style elements
+
+title.style.backgroundColor = 'green'
+'green'
+
+title.style.padding = "15px"
+'15px'
+
+-------------------------------
+
+###### ADDING CONTENT #######
+
+
+title.innerText
+'DOM Learning on Chai and Code'
+** shows the text which is only visible
+
+title.textContent 
+'DOM Learning on Chai and Code test text'
+** shows all the text even if it is hidden
+
+title.innerHTML
+'DOM Learning on Chai and Code <span style="display: none;">test text</span>'
+** shows html tags
+
+-------------------------------
+
+###### QUERY SELECTOR #######
+
+
+document.querySe1ector('h1')
+
+<h1 id="title" class="heading">
+"DOM Learning on Chai and Code "
+<span style="display: none; ">test text</span>
+</h1>
+** gives first element of same element types
+
+document.querySelector('h2')
+<h2>Lorem ipsum dolor sit amet. 1</h2>
+
+document.querySelector('#title')  ** selecting an id
+
+document.querySelector('.heading')  ** selecting a class
+
+document.querySelector('input[type="password"]') **  selecting an input tag with an attribute
+
+document.querySelector('p:first-child') ** can be use to select more specific type of selectors
+
+document.querySelector('ul')
+** selecting ul
+
+const myul = document.querySelector('ul')
+ ** storing ul in a variable  
+
+myul.querySelector('li')
+** selecting the first li
+
+const turnGreen = myul.querySelector('li')
+** storing li in const
+
+turnGreen.style.backgroundColor = 'green'
+turnGreen.style.padding = '16px' 
+** changing color and padding
+
+turnGreen.innerText
+'one'
+** viewing innerText
+
+turnGreen.innerText = "five"
+'five'
+** manipulating value of turnGreen 
+
+-------------------------------
+
+###### NODE LIST #######
+
+
+document.querySelectorAll
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+** querySelectorAll gives nodelist of all list items
+
+const tempLiList = document.querySelectorAll('li')
+** containing in a variable
+
+tempLiList
+NodeList(3) [li, li, li]
+** nodelist and html collections are not pure array
+** check in prototype, if map is not available then it is not array
+
+tempLiList.style.color = 'green'
+** gives error
+
+tempLiList[0].style.color = 'green'
+'green'
+** nodelist is not an array but there are many specifications like array it have
+
+const myH1 = document.querySelectorAll('h1')
+
+myH1
+NodeList [h1#title.heading]
+
+myH1.style.color = 'green'
+** not possible even it is only one h1
+
+myH1[0].style.color = 'green'
+'green'
+** not it will work
+
+//using forEach
+tempLiList.forEach(function (l) {
+    l.style.backgroundColor = 'Blue'
+})
+** set the background color as blue
+
+-------------------------------
+
+###### HTML COLLECTION #######
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+**gives HTMLCollection
+
+tempClassList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+tempClassList.forEach(function (li) {
+console.log(li)
+})
+** HTMLCollection do not have forEach property
+
+// converting HTMLCollections into an Array
+Array.from(tempClassList)
+** this method converts HTMLCollections into an Array
+
+const myConvertedArray = Array.from(tempClassList)
+** storing it into an array
+
+myConvertedArray.forEach(function (li) {
+    li.style.color = 'orange'
+})
+** applying forEach to change color 
+
+
+// applying on wikipedia page
+document.querySelectorAll('h2')
+NodeList(16) [h2.vector-pinnable-header-label, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2]
+
+const allH2 = document.querySelectorAll('h2')
+undefined
+
+allH2[1].innerText
+'History'
+
+document.querySelectorAll('.mw-headline')
+NodeList(75)...
+
+const myH3 = document.querySelectorAll('.mw-headline')
+undefined
+
+myH3[0].innerText
+'History'
+
+myH3.forEach(function(h) {
+    h.style.color = 'black';
+    h.style.backgroundColor = 'green';
+    h.style.padding = '10px';
+    h.innerText = 'Test'
+})
+undefined

@@ -1,0 +1,30 @@
+<!-- Creating new element in HTML -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+    const div = document.createElement('div')      // creating an element 
+    console.log(div);                              // printing that element  
+    div.className = "main"                         // adding class
+    // div.id = "myId"                             //  adding id
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")   // for adding custom attribute 
+    div.style.backgroundColor = "green"             // styling background color
+    // div.innerText = "Hello World"                  // adds the text inside the div
+    //  try to avoid this innerText beacause it overrides the existing value;
+    // preefer using createTextNode
+    const addText = document.createTextNode("Hello World!")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)           // adding th etext in the document body
+</script>
+</html>
