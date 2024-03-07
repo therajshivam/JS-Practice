@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Doc</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval, setTimeout, clearInterval, clearTimeout
+
+
+    // => setTimeout is a function which give timeout after which the function is executed  
+    // setInterval is a function which do the work after given time repeately  
+    // handler => a callback function whih dont have any name
+    // timeout => a number
+
+    // setTimeout(function () {
+    //     console.log("Hello");
+    // }, 2000  ) // after 2sec hello will be printed
+
+    const sayHello = function () {
+        console.log("Hello");
+    }
+    
+    setTimeout(sayHello, 2000)
+
+    // changing the name
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Hello to All"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+    // => clearTimeout
+
+    // clearTimeout(changeMe)
+
+    document.querySelector('#stop').addEventListener('click', function(e){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+
+
+
+
+    
+</script>
+</html>
