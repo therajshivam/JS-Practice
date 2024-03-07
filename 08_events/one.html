@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: orange;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+    // EVENTS
+
+    // onclick="alert('owl')" 
+    // not a fiseable way and not scalable
+    // written in html
+
+
+    // document.getElementById('owl').onclick = function() {
+    //     alert("owl clicked") 
+    // }
+    // gives less features and not suppoert propogation
+    
+
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     alert("owl clicked ")
+    // } , false )
+    // best approach
+    //third parameter in false , false is default .. interview
+    // e => event object
+
+    // basic events to study:
+    // type, timeStamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    //++++++++++ EVENT PROPOGATION +++++++++++++++++
+    
+
+    // two context of event propogation:
+    // 1. Event Bubbling : default false ; mainly uses
+    // 2. Event Capturing : 
+
+    // how event propogation is done and how to stop it?
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, false) 
+
+
+</script>
+</html>

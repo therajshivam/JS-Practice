@@ -1,0 +1,21 @@
+
+++++++++++++++++++ JAVASCRIPT ASYNC FUNDAMENTAKS ++++++++++++++++++
+
+** Default Javascript is Synchronous => first one code will execute , then the second.
+   It is single threaded language.
+
+** Execution Context:-
+-> execute one line of code at a time.
+
+!-> console log 1
+!-> console log 2
+!
+! CALL STACK         MEMORY HEAP
+!
+
+Each operation waits for the last one to complete before executing
+
+** Blocking Code vs NOn-Blocking Code
+
+-> Blocking Code -> blocks the flow of program -> Read file sync
+-> NOn-Blocking -> Code does not block execution -> Read file async
