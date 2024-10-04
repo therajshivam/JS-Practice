@@ -41,7 +41,7 @@
     // e => event object
 
     // basic events to study:
-    // type, timeStamp, defaultPrevented
+    // type, timeStamp, preventDefault
     // target, toElement, srcElement, currentTarget
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
@@ -55,7 +55,7 @@
     // 2. Event Capturing : 
 
     // how event propogation is done and how to stop it?
-
+    // preventDefault()
     document.getElementById('images').addEventListener('click', function(e){
         console.log("clicked inside the ul");
     }, false)
@@ -63,6 +63,25 @@
         console.log("owl clicked");
     }, false) 
 
+    // ++++++++++++++++++
 
+    // document.querySelector('#images').addEventListener
+    // ('click', function (e) {
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //    removeIt.remove()
+    //    // removeIt.parentNode.removeChild(removeIt)
+    // })
+
+    document.querySelector('#images').addEventListener
+    ('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }  
+    })
+
+    
 </script>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Changer</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        background-color: #121212; 
+        color: #fff;
+      }
+      .canvas {
+        text-align: center;
+        margin: 100px auto 100px;
+        width: 80%;
+      }
+      span {
+        display: block;
+      }
+      .button {
+        height: 100px;
+        width: 100px;
+        border: solid grey 2px;
+        display: inline-block;
+        border-radius: 25px;
+      }
+      #red {
+        background: red;
+      }
+      #green {
+        background: green;
+      }
+      #yellow {
+        background: yellow;
+      }
+      #blue {
+        background: blue;
+      }
+      .reset {
+        margin-top: 25px;
+        background: white;
+        border: solid black 2px;
+        border-radius: 25px;
+      }
+      h1 {
+        margin-bottom: 25%;
+      }
+      h2{
+        margin-top: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <h1>COLOUR CHANGER</h1>
+
+      <span class="button" id="red"></span>
+      <span class="button" id="green"></span>
+      <span class="button" id="yellow"></span>
+      <span class="button" id="blue"></span>
+
+      <h2>Click to change background colour!</h2>
+      <button class="reset" id="reset"> Reset</button>
+
+    </div>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            
+            if (e.target.id === 'red' || e.target.id === 'green' || e.target.id === 'yellow' || e.target.id === 'blue') {
+                body.style.backgroundColor = e.target.id;
+            }   
+        })
+    })
+
+    const reset = document.querySelector('.reset');
+    reset.addEventListener('click', function (resetAll) {
+        if (resetAll.target.id === 'reset') {
+            body.style.backgroundColor = "#121212";
+        }
+    })
+    
+    
+    
+  </script>
+</html>
