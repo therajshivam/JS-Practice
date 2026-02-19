@@ -1,4 +1,4 @@
-console.log(Math);
+  console.log(Math);
 
 console.log(Math.abs(-4)); // converts neg num to positive
 console.log(Math.round(4.6)); // round off the given num

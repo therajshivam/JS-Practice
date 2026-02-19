@@ -1,3 +1,4 @@
+
 const accountId = 542156 // use to declare constant, constant cant be change
 let accountEmail = "abc@gmail.com" // use to declare variable
 var accountPassword = "12345"
