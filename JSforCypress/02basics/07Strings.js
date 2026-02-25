@@ -39,3 +39,5 @@ console.log(url.includes('shivam'));
 console.log(url.includes('sid'));
 
 console.log(gameName.split('-'));
+
+// strings are immutable it does not change

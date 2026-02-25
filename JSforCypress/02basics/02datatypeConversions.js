@@ -53,7 +53,3 @@ console.log("******************STRING**********************");
 let number = 33
 let numberToString = String(number)
 console.log(number, typeof number, numberToString, typeof numberToString);
-
-
-
-
