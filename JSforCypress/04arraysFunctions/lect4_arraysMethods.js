@@ -47,3 +47,18 @@ console.log(superHeroes.slice(1));
 console.log(superHeroes.slice());
 
 // splice() : change original array (add, remove, replace) ; splice(startIdx. deLCount, newEl1...) - change original array
+let arr = [1, 2, 3, 5, 6, 8, 9, 11]
+// arr.splice(2, 2, 101, 102)
+// console.log(arr);
+
+// add element
+// arr.splice(2, 0, 101,102)
+// console.log(arr);
+
+// delete element
+arr.splice(3, 1)
+console.log(arr);
+
+// replace element
+arr.splice(3, 1, 101)
+console.log(arr);
