@@ -18,3 +18,7 @@ let newArr = nums.map((val)=>{
 })
 console.log(newArr);
 
+// MAP - FILTER - REDUCE
+
+// 1. MAP
+
