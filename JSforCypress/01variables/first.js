@@ -14,15 +14,15 @@ console.log(product);
 console.log(typeof(product));
 
 const profile = {
-    username : "@shradhakhapra",
+    username : "@shivam",
     isVerified : true,
     isFollowed : false,
     posts : 195,
     followers : "569" + "k",
     followings : 4,
-    fullName : "Shradha Khapra",
-    label : "Entrepreneur",
-    bio : "Apna College | Ex-Microsoft, DRDO To educate someone is the highest priviledge ❤"
+    fullName : "Shivam",
+    label : "Student",
+    bio : "Hi! how are u?"
 }
 
 console.log(profile);

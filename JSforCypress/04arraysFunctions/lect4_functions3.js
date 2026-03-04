@@ -1,6 +1,7 @@
 // some more array methods
+// MAP - FILTER - REDUCE
 
-// 1. map
+// 1. MAP
 // creates a new array with the results of some operation. The value its callback returns are used to form new array.
 // arr.map(callbackFnx(value, index, array))
 
@@ -18,9 +19,7 @@ let newArr = nums.map((val)=>{
 })
 console.log(newArr);
 
-// MAP - FILTER - REDUCE
-
 // 1. MAP
-
+// 
 
 
