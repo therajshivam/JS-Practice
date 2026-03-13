@@ -25,3 +25,4 @@ console.log(realAnotherArray);
 console.log(Array.isArray("hello")) // checks if the give is array or not 
 
  
+
