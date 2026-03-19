@@ -23,8 +23,3 @@ console.log(realAnotherArray);
 
 // Duing web scraping data may come in another format like nodelist, object or string but we want it in array
 console.log(Array.isArray("hello")) // checks if the give is array or not 
-
-
- 
-
-
