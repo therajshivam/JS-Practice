@@ -2,19 +2,23 @@
 
 // alert ( 3 + 3 ) // we are using nodejs, not browser // runs only inside browser console
 
+
+// dont write code like this
 console.log( 3 
     + 3 ); // code readiblity should be high
 
-console.log("Hello");
 
-let name = "Shivam"
-let age = 18
-let isLoggedIn = false
-let state;
+// datatypes
+let name = "Shivam"     // string
+let age = 18            //numbers
+let isLoggedIn = false  // boolean
+let state;              // undefined
+let temp = null;       
+
 
 // premitive dataTypes :
-// number => 2 to power 53 (limit)
-// biginit
+// number => 2 to power 53 (range)
+// bigint
 // string => "" or '' , prefer to use ""
 // boolean => true/false
 // null => stand alone value, represent of emply value
@@ -23,5 +27,8 @@ let state;
 
 // object
 
+
 console.log(typeof undefined); //undefined
 console.log(typeof null); //object
+console.log(typeof "hey"); //string
+console.log(typeof age); //number
