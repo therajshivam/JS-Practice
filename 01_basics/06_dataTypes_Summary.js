@@ -87,7 +87,7 @@ console.log(a); // 10
 console.log(b); // 20
 
 // Call by Reference
-// A reference (address) is copied.
+// A reference (address) to the same object is copied.
 // Changes affect the original object.
 let user1 = {
     name: "Shivam"
