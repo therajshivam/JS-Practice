@@ -1,11 +1,55 @@
-let score = undefined
+/*
+typeof operator can be declared two types - 
+console.log(typeof variable);
+console.log(typeof (variable));
+*/
 
-// console.log(typeof score);
-// console.log(typeof(score));
+//NUMBER
+// String to Number
+let score = 33
+console.log(score);         // 33
+console.log(typeof score);  // number
 
-let valueInNumber = Number(score)
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber);
+let marks = "21"
+console.log(marks);         // 21
+console.log(typeof marks);  // string
+// now we will convert string into number
+let marksInNumber = Number(marks);
+console.log(marksInNumber);          // 21 
+console.log(typeof marksInNumber);   // number
+
+let amount = "75abc" // or "hello"
+// convert string into number
+let amountInNumber = Number(amount)
+console.log(amountInNumber);           // NaN
+console.log(typeof amountInNumber);    // number
+
+// Null to Number
+let price = null
+console.log(price);                // null
+console.log(typeof price);         // object
+// convert into number 
+let priceInNumber = Number(price);
+console.log(priceInNumber);         // 0
+console.log(typeof priceInNumber);  // number
+
+// Undefined to Number
+let price1 = undefined
+console.log(price1);           // undefined
+console.log(typeof price1);    // undefined
+// convert into number
+let price1InNumber = Number(price1);
+console.log(price1InNumber);          // NaN
+console.log(typeof price1InNumber);   // number
+
+// Boolean to Number
+let count = true
+console.log(count);         // true
+console.log(typeof count);  // boolean
+// convert into number
+let countInNumber = Number(count);
+console.log(countInNumber);          // 1 
+console.log(typeof countInNumber);   // number
 
 // "33" => 33
 // "33abc" => NaN (Not a Number) type is number
@@ -14,54 +58,58 @@ let valueInNumber = Number(score)
 // null => 0
 // undefined => NaN
 
+// BOOLEAN
+// Number to Boolean
 let isLoggedIn = 1
-
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-// console.log(booleanIsLoggedIn);
+console.log(booleanIsLoggedIn);
+console.log(typeof booleanIsLoggedIn);
 
 // 1 => true; 0 => false
 //  "" => false
 // "abc" => true
 
+// STRING
+// numbers into string
 let someNumber = 33
+let stringSomeNumber = String(someNumber)
+console.log(stringSomeNumber);
+console.log(typeof stringSomeNumber);
 
-let stringNumber = String(someNumber)
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
 
 
-// *************************************** OPERATIONS ******************************************
+// // *************************************** OPERATIONS ******************************************
 
-let value = 3
-let negValue = -value
-// console.log(negValue);
+// let value = 3
+// let negValue = -value
+// // console.log(negValue);
 
-// console.log(2+2);
-// console.log(2-2);
-// console.log(2*2);
-// console.log(2**3); // power
-// console.log(2/2);
-// console.log(2%2);
+// // console.log(2+2);
+// // console.log(2-2);
+// // console.log(2*2);
+// // console.log(2**3); // power
+// // console.log(2/2);
+// // console.log(2%2);
 
-let str1 = "hello"
-let str2 = " world"
+// let str1 = "hello"
+// let str2 = " world"
 
-let str3 = str1 + str2
-// console.log(str3);
+// let str3 = str1 + str2
+// // console.log(str3);
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// // console.log("1" + 2);
+// // console.log(1 + "2");
+// // console.log("1" + 2 + 2);
+// // console.log(1 + 2 + "2");
 
-// console.log(+true);
-// console.log(+"");
+// // console.log(+true);
+// // console.log(+"");
 
-let num1, num2, num3
+// let num1, num2, num3
 
-num1 = num2 = num3 = 2 + 2
+// num1 = num2 = num3 = 2 + 2
 
-let gameCounter = 100
-gameCounter++; // postfix and prefix
-console.log(gameCounter);
+// let gameCounter = 100
+// gameCounter++; // postfix and prefix
+// console.log(gameCounter);
 
