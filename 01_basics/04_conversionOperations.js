@@ -4,6 +4,8 @@ console.log(typeof variable);
 console.log(typeof (variable));
 */
 
+// Explicit Conversion (Type Casting) -- intentionally changing datatypes
+
 //NUMBER
 // String to Number
 let score = 33
@@ -62,8 +64,8 @@ console.log(typeof countInNumber);   // number
 // Number to Boolean
 let isLoggedIn = 1
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn);
-console.log(typeof booleanIsLoggedIn);
+console.log(booleanIsLoggedIn);          // true
+console.log(typeof booleanIsLoggedIn);   // boolean
 
 // 1 => true; 0 => false
 //  "" => false
@@ -73,5 +75,5 @@ console.log(typeof booleanIsLoggedIn);
 // numbers into string
 let someNumber = 33
 let stringSomeNumber = String(someNumber)
-console.log(stringSomeNumber);
-console.log(typeof stringSomeNumber);
+console.log(stringSomeNumber);         // 33
+console.log(typeof stringSomeNumber);  // string
