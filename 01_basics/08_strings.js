@@ -57,21 +57,24 @@ console.log(anotherString);
 
 const newStringOne = "      shivam      "
 console.log(newStringOne);
-console.log(newStringOne.trim());
+console.log(newStringOne.trim()); // shivam
 
 // str.replace(searchVal, newVal)
 const url = "https://shivam.com/shivam%20raj"
-console.log(url.replace('%20', '-'));
+console.log(url.replace('%20', '-')); // https://shivam.com/shivam-raj
 
-console.log(url.includes('shivam'));
-console.log(url.includes('sid'));
+console.log(url.includes('shivam')); // true
+console.log(url.includes('sid')); // false
 
-console.log(gameName.split('-')); // convert string into array 
+console.log(gameName.split('-')); 
+// Split a string into substrings using the specified separator and return them as an array.
+// [ 'shivam', 'game', 'com' ]
+
 
 // str1.concat(str2)
 let str1 = "Hello"
 let str2 = "World"
-console.log(str1.concat(str2));
+console.log(str1.concat(str2)); // HelloWorld
 
 console.log("Hi ".repeat(3)); // Hi Hi Hi
 
