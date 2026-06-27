@@ -16,13 +16,18 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // st
 
 // Escape Characters
 // \n - next line
-// \t - tab spave
+// \t - tab space
 console.log("Hello \tWorld");
 
+// Creating Strings
 // Primitive String
 let city = "Chandigarh";
+console.log(typeof city); // string
+
 // String Object
 const cityName = new String("Chandigarh");
+console.log(typeof cityName); // object
+
 // Prefer primitive strings. new String() creates a String object and is rarely used.
 
 // another syntax for string (String Object)
@@ -30,21 +35,25 @@ const gameName = new String('shivam-game-com')
 
 console.log(gameName[0]); // accessing key of string (string indices)
 console.log(gameName.__proto__); // accessing key of string
+// console.log(Object.getPrototypeOf(gameName));
 
-// STRING METHODS : These are built-in fuctions to manipulate the string
+// STRING METHODS : These are built-in functions to manipulate the string
 console.log(gameName.length); // string length
 console.log(gameName.toUpperCase()); 
 console.log(gameName.toLowerCase()); 
 console.log(gameName.charAt(2)); // str.charAt(index)
 console.log(gameName.indexOf('v'));
+console.log(gameName.at(-1)); // last character access
 
 
 const newString = gameName.substring(0, 4) // not including the last no. ie 4
 console.log(newString);
+// Doesn't accept negative indexes
 
 // str.slice(start, end?)
 const anotherString = gameName.slice(-8, 4)
 console.log(anotherString);
+// Accepts negative indexes.
 
 const newStringOne = "      shivam      "
 console.log(newStringOne);
@@ -63,6 +72,8 @@ console.log(gameName.split('-')); // convert string into array
 let str1 = "Hello"
 let str2 = "World"
 console.log(str1.concat(str2));
+
+console.log("Hi ".repeat(3)); // Hi Hi Hi
 
 // strings are immutable it does not change
 
