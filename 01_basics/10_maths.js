@@ -1,3 +1,4 @@
+// Math is a built-in JavaScript object that provides mathematical properties (e.g., Math.PI) and methods (e.g., Math.round(), Math.sqrt(), Math.random()).
 console.log(Math); // Object [Math] {}
 
 console.log(Math.abs(-4)); // absolute value, converts negative values to positive
