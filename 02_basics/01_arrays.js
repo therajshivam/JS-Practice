@@ -1,6 +1,6 @@
 // array is an object; stores a collection of multiple items under a single variable name
-// declairing array; array should be in square brackets
 
+// declairing array; array should be in square brackets
 const myArr = [0, 1, 2, 3, 4, 5] // inside array are called elements; elements can be string, numbers, boolean or mixed
 
 // JS arrays are resizable and can contain a mix of diff datatypes.
@@ -13,7 +13,6 @@ const myHeros = ["ironman", "hulk"]
 const myArr2 = new Array(1, 2, 3, 4) // another way of declaring array
 
 // Array methods :
-
 myArr.push(6) // adds value inside the array
 myArr.push(7) 
 myArr.pop() // removes the last element of array
@@ -30,7 +29,6 @@ console.log(myArr);
 console.log(newArr);
 
 // slice and splice
-
 console.log("A ", myArr ); // original arr
 
 const myn1 = myArr.slice(1, 3) // using slice

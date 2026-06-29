@@ -44,5 +44,5 @@ console.log(newDate.getMonth() + 1);
 // internationalisation
 newDate.toLocaleString('default',{
     weekday: "long",
-    
-})                             
+
+})   
