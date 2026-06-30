@@ -3,6 +3,8 @@
 const marvelHeros = ["thor", "ironman", "spiderman"]
 const dcHeros = ["superman", "batman", "flash"]
 
+
+
 // 1. push
 marvelHeros.push(dcHeros) // gives array inside the array; dcHeros array becomes another element of this array
 // push into axisting array
