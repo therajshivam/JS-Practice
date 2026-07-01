@@ -38,3 +38,9 @@ let score1 = 100
 let score2 = 200
 let score3 = 300
 console.log(Array.of(score1, score2, score3)); // Returns a new array from a set of elements.
+
+/*
+Array.isArray() ---	Check if something is an array
+Array.from()    --- Convert something into an array
+Array.of()	    --- Create a new array from given values
+*/
