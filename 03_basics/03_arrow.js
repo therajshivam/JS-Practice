@@ -1,4 +1,4 @@
-// THIS and arrow function
+// THIS  keyword and Arrow function
 
 // THIS keyword used to refer the current context.
 // current context is the inside the existing scope. \\ context means value
