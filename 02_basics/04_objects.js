@@ -20,6 +20,7 @@ const regularUser = {
 }
 // console.log(regularUser.fullname.userfullname.firstname); // accessing nested values
 // Optional chaining; ? ; use after an object as prectiong if the value doesnot exists (can be useful when data coming from apis)
+// Eg: regularUser.fullname?.userfullname?.firstname
 
 // Merging objects
 const obj1 = {1: "a", 2: "b"}

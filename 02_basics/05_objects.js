@@ -20,6 +20,7 @@ console.log(instructor);
 // }
 
 // Json is used to store apis values
+// JSON is the standard format for exchanging data between client and server.
 // it is like in object formate
 // difference is objects have variable name
 // json key is also in string formate

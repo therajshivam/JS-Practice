@@ -14,10 +14,10 @@ const JsUser = {
     name: "Shivam",
     "full name": "Shivam Raj",
     [mySym]: "mykey1", // square bracket syntax for symbols
-    age: "20",
+    age: 20,
     location: "Chandigarh",
     email: "shivam@google.com",
-    isLoggedIn: "false",
+    isLoggedIn: false,
     lastLoginDays: ["Monday", "Saturday"]
 }
 
@@ -30,7 +30,7 @@ console.log(JsUser[mySym]);
 // changing object values
 JsUser.email = "shivam@chatgpt.com"
 
-// locking values; anyone cant change the value
+// locking values; Prevents adding, deleting or modifying properties.
 Object.freeze(JsUser)
 JsUser.email = "shivam@microsoft.com" // cant be change now after freezing
 // console.log(JsUser);
