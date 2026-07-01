@@ -4,7 +4,6 @@
 // Object.create => constructor method
 
 // object literals
-
 // declaring objects
 // name => keys ; shivam => values
 // in objects, we can define keys and values
@@ -16,7 +15,7 @@ const JsUser = {
     "full name": "Shivam Raj",
     [mySym]: "mykey1", // square bracket syntax for symbols
     age: "20",
-    location: "Jaipur",
+    location: "Chandigarh",
     email: "shivam@google.com",
     isLoggedIn: "false",
     lastLoginDays: ["Monday", "Saturday"]
@@ -33,8 +32,7 @@ JsUser.email = "shivam@chatgpt.com"
 
 // locking values; anyone cant change the value
 Object.freeze(JsUser)
-JsUser.email = "shivam@microsoft.com"
-
+JsUser.email = "shivam@microsoft.com" // cant be change now after freezing
 // console.log(JsUser);
 
 // adding functions in objects
