@@ -28,7 +28,7 @@ const realAnotherArray = anotherArray.flat(Infinity)
 console.log(realAnotherArray);
 
 // Duing web scraping data may come in another format like nodelist, object or string but we want it in array
-// Array.from() : Converts iterable or array-like objects into an array.
+// Array.from() : Converts iterable or array-like objects into an array, returns a new array
 console.log(Array.isArray("Hello")); // do u have this in array?
 console.log(Array.from("Hello")); // from : converts into array
 console.log(Array.from({name: "hello"})); // interesting case of interview; gives empty array in object; need to define keys or values to create an array
