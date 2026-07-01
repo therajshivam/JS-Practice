@@ -1,5 +1,5 @@
 // functions 
-// it is just a way of packaging the codes inside a package and we can use the copy of package anywhere and use it.
+// A function is a reusable block of code that performs a specific task.
 
 function sayMyName() {
     console.log("S");
@@ -11,7 +11,7 @@ function sayMyName() {
 }
 sayMyName()
 
-// sayMyName => funuction reference
+// sayMyName => function reference
 // sayMyName() => funuction execution
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -21,8 +21,8 @@ function addTwoNumbers(number1, number2) {   // parameters
 }
 addTwoNumbers(3, 4)  // arguments
 
-// parameters : when we make defination of the function, then the inputs inside it are called parameters.
-// arguments : when we call the fuunction then the value we pass in it then we call it arguments.
+// parameters : when we make definition of the function, then the inputs inside it are called parameters.
+// arguments : when we call the function then the value we pass in it then we call it arguments.
 
 const result = addTwoNumbers(3, 4)
 console.log("Result: ", result);  // Result:  undefined
@@ -42,7 +42,7 @@ console.log("Result: ", result);
 function addTwoNumbers(number1, number2) { 
 
     // let result = number1 + number2
-    // return result      // funtion will not work after returning it
+    // return result      // Code after return is never executed.
 
     //  OR 
 
@@ -54,7 +54,7 @@ function addTwoNumbers(number1, number2) {
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++
 
-function loginUserMessage(usename = "sam"){
+function loginUserMessage(usename = "sam"){  // Default Parameter
     // if(usename === undefined) {
     //     console.log("Please enter a username");
     //     return
