@@ -8,11 +8,16 @@
 function calculateCartPrice(...num1) {
     return num1
 } 
-
 // console.log(calculateCartPrice(200, 300, 400, 500, 2000))
 
+function anotherCart(val1, val2, ...total) {
+    return total;
+}
+console.log(anotherCart(20, 30, 40, 50, 60));
+// 20 goes into val1 and 30 goes into val2, after all whatever left get into ...total
+ 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// objects and function
+// objects passing in function
 
 const user = {
     username: "shivam",
@@ -31,7 +36,7 @@ handleObject({
 })
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// arrays and function
+// arrays passing in function
 
 const myNewArray = [200, 400, 100, 600]
 
