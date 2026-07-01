@@ -14,19 +14,15 @@ sayMyName()
 // sayMyName => funuction reference
 // sayMyName() => funuction execution
 
-
-// Function for add two numbers
-
-
-// ++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++
+// Function for adding two numbers
 function addTwoNumbers(number1, number2) {   // parameters
     console.log(number1 + number2);
 }
-
 addTwoNumbers(3, 4)  // arguments
 
 // parameters : when we make defination of the function, then the inputs inside it are called parameters.
-// arguments : when we call the fuunction hen the value we pass in it then we call it arguments.
+// arguments : when we call the fuunction then the value we pass in it then we call it arguments.
 
 const result = addTwoNumbers(3, 4)
 console.log("Result: ", result);  // Result:  undefined
@@ -36,9 +32,9 @@ console.log("Result: ", result);  // Result:  undefined
 function addTwoNumbers(number1, number2) { 
     let result = number1 + number2
     return result
-    console.log(abc); // it will never execute; because by defalut function rules says after returning a function, the function will not do any work.
+    // console.log(abc); // it will never execute; because by default function rules says after returning a function, the function will not do any work.
 }
-const result = addTwoNumbers(3, 4)
+// const result = addTwoNumbers(3, 4)
 console.log("Result: ", result);  
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -53,7 +49,7 @@ function addTwoNumbers(number1, number2) {
     return number1 + number2
 }
 
-const result = addTwoNumbers(3, 5)
+// const result = addTwoNumbers(3, 5)
 // console.log("Result: ", result);  
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -65,7 +61,7 @@ function loginUserMessage(usename = "sam"){
     if(!usename) {
         console.log("Please enter a username");
         return
-    }
+    }        
     return `${usename} just logged in`
 }
 // console.log(loginUserMessage("shivam"));
