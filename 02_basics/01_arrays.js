@@ -5,7 +5,8 @@
 // declaring array; array should be in square brackets
 const myArr = [0, 1, 2, 3, 4, 5] // inside array are called elements; elements can be string, numbers, boolean or mixed
 console.log(myArr[0]); // accessing value in array; array indexing starts with 0; first element indexed as 0
- 
+console.log(myArr.length); 
+
 const myHeros = ["ironman", "hulk"]
 const myArr2 = new Array(1, 2, 3, 4) // another way of declaring array
 

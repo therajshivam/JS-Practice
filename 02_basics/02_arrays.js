@@ -5,26 +5,30 @@ const dcHeros = ["superman", "batman", "flash"]
 
 // 1. push
 marvelHeros.push(dcHeros) // gives array inside the array; dcHeros array becomes another element of this array
-// push into axisting array
+// push into existing array
 console.log(marvelHeros);
 console.log(marvelHeros[3][0]); // accesing superman 
 
 // 2. concat
 const allHeros = marvelHeros.concat(dcHeros) // returns a new array
 console.log(allHeros);
+// Merges arrays and returns a new array, Does not modify the original arrays.
 
 // 3. spread ; like dropping a glass and it spreads
+// Expands elements of an array.
 const allNewHeros = [...marvelHeros, ...dcHeros]
 console.log(allNewHeros);
 // spread is easier way to merge arrays; it returns a new array
 
 // 4. flat; Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-// intresting case
+// Flattens nested arrays into a single array.
+// interesting case
 const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]] // array inside array inside array
 const realAnotherArray = anotherArray.flat(Infinity)
 console.log(realAnotherArray);
 
 // Duing web scraping data may come in another format like nodelist, object or string but we want it in array
+// Array.from() : Converts iterable or array-like objects into an array.
 console.log(Array.isArray("Hello")); // do u have this in array?
 console.log(Array.from("Hello")); // from : converts into array
 console.log(Array.from({name: "hello"})); // interesting case of interview; gives empty array in object; need to define keys or values to create an array
