@@ -1,7 +1,7 @@
-// THIS  keyword and Arrow function
+// THIS keyword and Arrow function
 
-// THIS keyword used to refer the current context.
-// current context is the inside the existing scope. \\ context means value
+// THIS keyword used to refer the current context inside the existing scope. 
+// this refers to the current execution context.
 
 const user = {
     username: "abcd",
@@ -15,7 +15,7 @@ const user = {
 
 // user.welcomeMessage()
 // user.username = "sam"
-// user.welcomeMessage()  // the value was not hardcode using this, sam is printted here because the current context username value was not changed
+// user.welcomeMessage()  // the value was not hardcode using this, sam is printed here because the current context username value was not changed
 
 // console.log(this); // in node environment this refers to an empty object because there is no context in global.
 // in the browser, the global object is window object
@@ -24,9 +24,10 @@ const user = {
 
 // function chai () {
 //     let username = "hitesh"
-//     console.log(this.usename); // undefined; this context can only be wrok with objects not with function
+//     console.log(this.usename); // undefined; this context can only be work with objects not with function
 // }
 // chai() // this is a function which can be used for the repurpose of the function which is called as an arrow function
+// In a regular function, this does not refer to local variables.
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // declaring function using the arrow function
@@ -44,8 +45,12 @@ const chai = () => {
 }
 // chai()
 
+// Arrow functions do not have their own this.
+// They inherit this from the surrounding scope.
+
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // BASIC ARROW FUNCTION (EXPLICIT)
+// Explicit return - Uses return keyword.
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
@@ -54,6 +59,8 @@ const chai = () => {
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // IMPLICIT RETURN ARROW FUNCTION 
+// If the function body is a single expression, return is implicit.
+
 // no need of adding return , we have assumed , it is a one line code
 
 // const addTwo = (num1, num2) => num1 + num2
@@ -66,4 +73,4 @@ const chai = () => {
 
 const addTwo = (num1, num2) => ({username: "abcd"})
 console.log(addTwo(3, 4));
-
+// Wrap object in () to return it implicitly.
