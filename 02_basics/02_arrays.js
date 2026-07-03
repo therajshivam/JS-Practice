@@ -4,26 +4,28 @@ const marvelHeros = ["thor", "ironman", "spiderman"]
 const dcHeros = ["superman", "batman", "flash"]
 
 // 1. push
-marvelHeros.push(dcHeros) // gives array inside the array; dcHeros array becomes another element of this array
+const a = [1, 2, 3]
+const b = [2, 4, 6]
+a.push(b) // gives array inside the array; dcHeros array becomes another element of this array
 // push into existing array
-console.log(marvelHeros);
-console.log(marvelHeros[3][0]); // accesing superman 
+console.log("push() ", a);
+console.log("accessing ", a[3][0]); // accessing 2 
 
 // 2. concat
 const allHeros = marvelHeros.concat(dcHeros) // returns a new array
-console.log(allHeros);
+console.log("concat() ", allHeros);
 // Merges arrays and returns a new array, Does not modify the original arrays.
 
 // 3. spread ; like dropping a glass and it spreads
 // Expands elements of an array.
 const allNewHeros = [...marvelHeros, ...dcHeros]
-console.log(allNewHeros);
+console.log("spread() ", allNewHeros);
 // spread is easier way to merge arrays; it returns a new array
 
 // 4. flat; Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 // Flattens nested arrays into a single array.
 // interesting case
-const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]] // array inside array inside array
+const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]] // nested array
 const realAnotherArray = anotherArray.flat(Infinity)
 console.log(realAnotherArray);
 
