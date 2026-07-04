@@ -5,7 +5,7 @@ if(condition){
 }
 */
 // true => condition will be execute , false => condition will not execute
-// comparisons in condition : <, >, <=, >=, ==, !=, ===, !==
+// comparison operators in condition : <, >, <=, >=, ==, !=, ===, !==
 
 const temperature = 41
 if (temperature < 50 ) {
@@ -30,11 +30,12 @@ if (score > 100) {
 // Short hand notation
 // avoid writing this code - not a clean code
 // const balance = 1000;        
+// if (balance > 500) console.log("test"), console.log(test2);
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // nested if-else
 
-const balance = 1000;
+const balance = 800;
 
 if (balance < 500) {
     console.log("less than 500");
