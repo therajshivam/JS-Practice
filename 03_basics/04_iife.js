@@ -1,7 +1,7 @@
 // Immediately Invoked Functions Expressions (IIFE)
-// syntax : () ()  
+// syntax : (function(){})();
 // used to execute function immediately
-// used to ignore pollution from global scope
+// // Creates a private scope and avoids polluting the global scope.
 
 (function chai()  {
    // named iife
@@ -9,7 +9,7 @@
 })(); // end with semicolon
 
 ( (name) => {
-   // simple iife or unnamed iife 
+   // Unnamed (Arrow) IIFE
    console.log(`DB CONNECTED TWO ${name}`) // passed with parameter
 } )('abcd');
 
