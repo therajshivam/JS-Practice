@@ -6,10 +6,11 @@
 (function chai()  {
    // named iife
    console.log(`DB CONNECTED`);
-})();
+})(); // end with semicolon
 
 ( (name) => {
-   console.log(`DB CONNECTED TWO ${name}`)
-} )('abcd')
+   // simple iife or unnamed iife 
+   console.log(`DB CONNECTED TWO ${name}`) // passed with parameter
+} )('abcd');
 
 // while writing two IIFE, add semicolon ;
