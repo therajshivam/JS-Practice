@@ -1,4 +1,5 @@
 // destructuring of objects
+// Object destructuring is a JavaScript feature that lets you extract properties from an object and store them in variables.
 const course = {
     courseName: "JS in Hindi",
     price: "999",
