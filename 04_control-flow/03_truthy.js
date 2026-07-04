@@ -1,5 +1,5 @@
 // falsy values :- (which values are assumed false)
-// false, 0, -0, BigInt 0n, "", null, undefined, Nan
+// false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
 // truthy values
 // "0", 'false', " ", [], {}, function() {}
@@ -29,24 +29,19 @@ if (Object.keys(emptyObject).length === 0){
 }  
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// false == 0
-// true   // output
-// false == ' '
-// true   // output
-// 0 == ''
-// true   // output
-
+// false == 0 -> output: true
+// false == ' ' -> output: true
+// 0 == '' -> output: true 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Nullish Coalescing Operator (??): null / undefined
+// Nullish Coalescing Operator (??): null / undefined (safety check)
 
-// let val1 = 5 ?? 10
-// let val1 = null ?? 10
-// let val1 = undefined ?? 15
-// let val1 = null ?? 15 ?? 10
+let val1 = 5 ?? 10            // 5 
+let val2 = null ?? 10         // 10
+let val3 = undefined ?? 15    // 15
+let val4 = null ?? 15 ?? 10   // 15
 
-
-// console.log(val1);
+console.log(val1);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Terniary Operator
