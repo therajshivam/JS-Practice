@@ -10,6 +10,7 @@ coding.forEach(function (item) {
 })
 
 // callback function is inside forEach()
+// forEach() accepts a callback function, which is executed for every array element.
 
 // with arrow function
 coding.forEach( (item) => {
@@ -17,7 +18,7 @@ coding.forEach( (item) => {
 } )
 
 
-// with declaring seperate function and taking reference in forEach()
+// function reference - with declaring seperate function and taking reference in forEach()
 function printMe(item) {
     console.log(item);
 }
@@ -30,7 +31,7 @@ coding.forEach( (item, index, arr) => {
 } )
 
 // -------------------------------------------------------------------------------
-// [{}, {}, {}]
+// [{}, {}, {}] -- array of objects
 // objects inside array (mostly these values comes from db)
 
 const myCoding = [
