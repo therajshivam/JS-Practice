@@ -3,15 +3,29 @@
 
 const myNums = [1, 2, 3]
 
-// accumulator,currentvalue
-// const myTotal = myNums.reduce( function(acc, currval) {
-//     console.log(`acc: ${acc} and currval: ${currval}`);
-//     return acc + currval
-// }, 0)
+// accumulator,currentvalue,initialisation
+const myTotal = myNums.reduce( function(acc, currval) {
+    // console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+}, 0) // 0 - initial value
+// console.log(myTotal);
 
-const myTotal = myNums.reduce( (acc, curr) => acc+curr ,0)
 
-console.log(myTotal);
+const myTotal1 = myNums.reduce( (acc, currVal) => {
+    return acc + currVal
+}, 0)
+// console.log(myTotal1);
+
+
+const myTotal2 = myNums.reduce( (acc, curr) => acc+curr ,0)
+// console.log(myTotal2);
+
+// using forEach()
+let totalVal = 0
+myNums.forEach( (nums) => {
+    totalVal = totalVal + nums;
+})
+console.log(totalVal);
 
 
 const shoppingCart = [
@@ -34,5 +48,4 @@ const shoppingCart = [
 ]
 
 const priceToPay = shoppingCart.reduce((acc,item) => acc + item.price,0)
-
 console.log(priceToPay);
