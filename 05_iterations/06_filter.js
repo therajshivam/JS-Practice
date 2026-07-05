@@ -1,3 +1,6 @@
+// filter() → Returns a new array containing only elements that satisfy a condition.
+
+
 // forEach()
 const coding = ["js", "ruby", "java", "py", "cpp"]
 const value = coding.forEach( (item) => {

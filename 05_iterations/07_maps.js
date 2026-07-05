@@ -1,16 +1,21 @@
+// map() - callback function
+// automatically returns value
+
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNumbers.map( (num) => num + 10)
-// console.log(newNums);
+const newNums = myNumbers.map( (num) => num + 10)
+console.log(newNums);
+
 
 
 // chaining
-// using ore than one methods
+// using more than one methods
 
 
-const newNums = myNumbers
-                .map( (num) => num * 10)
-                .map( (num) => num + 1)
-                .filter( (num) => num >= 40)
+// const newNums = myNumbers
 
-console.log(newNums);                
+//                 .map( (num) => num * 10)
+//                 .map( (num) => num + 1)
+//                 .filter( (num) => num >= 40)
+
+// console.log(newNums);                
