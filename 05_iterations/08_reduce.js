@@ -1,3 +1,6 @@
+// reduce() → Reduces an array to a single value by accumulating all elements.
+
+
 const myNums = [1, 2, 3]
 
 // accumulator,currentvalue
