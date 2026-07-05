@@ -1,7 +1,9 @@
-// object and array indexes, gets object keys
+// for-in loop - use for objects
 
-// for-in loop
+// Iterates over the keys (property names) of an object.
+// For arrays, it returns the indexes.
 
+// Objects
 const myObject = {
     js: 'Javascript',
     cpp: 'C++',
@@ -10,25 +12,25 @@ const myObject = {
 } 
 
 for (const key in myObject) {
-    // console.log(key);
-    // console.log(myObject[key]);
+    // console.log(key); // gives keys of object
+    // console.log(myObject[key]); // gives values of objects
 
 
     // console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
 // Array
-
 const programming = ["js", "rb", "py", "java", "cpp"]
 
 for (const key in programming) {
-    // console.log(key);
-    // console.log(programming[key]);
+    // console.log(key); // gives index of array values
+    // console.log(programming[key]); // gives values of arrays 
 
 }
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Maps
+// Maps is not iterable with for-in
+// Use for...of with Map instead.
 
 const map = new Map()
 map.set('IN', "India")
@@ -39,5 +41,3 @@ map.set('IN', "India")
 for (const key in map) {
     console.log(key);
 }
-
-// Map is not iterable
