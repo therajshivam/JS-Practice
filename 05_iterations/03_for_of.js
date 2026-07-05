@@ -1,25 +1,25 @@
-
+// iterables like array, string, maps, sets etc
 
 // for of
 
 // ["", "", ""]
 // [{}, {}, {}]
 
+// array
 const arr = [1, 2, 3, 4, 5]
-
 for (const num of arr) {
     // console.log(num);
 }
 
+// strings
 const greetings = "Hello World!"
 for (const greet of greetings) {
     // console.log(`Each char is ${greet}`);
 }
 
-
-
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Maps 
+// map object holds key-value pairs, remembers the original insertion order of the keys
 // no duplicate values; all unique values
 
 const map = new Map()
@@ -30,21 +30,25 @@ map.set('IN', "India") // will not print this because it only give unique values
 
 // console.log(map);
 
-for (const [key, value] of map) {   // square brackets give destructure of array
+for (const [key, value]  of map) {   // square brackets give destructure of array
     // console.log(key, ':-', value);
 }
 
-
+// Each Map entry is an array:
+// ["IN", "India"]
+// Destructuring
+// [key, value]
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Object
+// Objects cant be iterate using for-of
 
 const myObject = {
     'game1': 'NFS', 
-    'game1': 'Spiderman', 
+    'game2': 'Spiderman', 
 }
 
-// for (const [key, value] of myObject) {   
-//     console.log(key, ':-', value);
-// }
+for (const [key, value] of myObject) {   
+    // console.log(key, ':-', value);
+}
+
 // myObject is not iterable

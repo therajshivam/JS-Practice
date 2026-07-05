@@ -1,4 +1,6 @@
-// Object
+// object and array indexes, gets object keys
+
+// for-in loop
 
 const myObject = {
     js: 'Javascript',

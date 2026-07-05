@@ -1,5 +1,8 @@
 // High order array loops
 
+// forEach() is an array method.
+// forEach() executes a callback function once for every element in an array.
+
 const coding = ["js", "ruby", "java", "py", "cpp"]
 
 // coding.forEach( function (value) {
