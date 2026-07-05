@@ -1,36 +1,47 @@
-// const coding = ["js", "ruby", "java", "py", "cpp"]
+// forEach()
+const coding = ["js", "ruby", "java", "py", "cpp"]
+const value = coding.forEach( (item) => {
+    // console.log(item);
+    // return item;
+})
 
-// const value = coding.forEach( (item) => {
-//     // console.log(item);
-//     return item
-// })
-
-// console.log(value);
-// gives undefined; cant return any values.
+// console.log(value); // output : undefined
+// forEach() doesnt return any value 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // filter
 // filter returns the values
+// filter() returns a NEW array containing only the elements that satisfy the condition.
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => num > 4) 
+const newNums = myNums.filter( (num) => num > 4) 
 // console.log(newNums);
 
+// filter takes callback function inside it - each value is accessed in it and one condition is used to check, true condition values are returned else not
+// The callback should return true or false.
+// If true → element is included.
+// If false → element is skipped.
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4})              // return keyword for scope
-// console.log(newNums);
+
+// important thing to know
+const newNums2 = myNums.filter( (num) => {
+    return num > 4})         // explicit reurn : return keyword is necessary as because of curly braces it started block scope
+// console.log(newNums2);
 
 
-const newNums = []
+// without filter(), with forEach()
+const newNums3 = []
 
 myNums.forEach( (num) => {
     if (num > 4) {
-        newNums.push(num)
+        newNums3.push(num)
     }
 }) 
-// console.log(newNums);
+// console.log(newNums3);
+// We manually push matching elements.
+// filter() does this automatically.
 
 
 const books = [
@@ -45,11 +56,11 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre ===  'History')
 
+let userBooks = books.filter( (bk) => bk.genre === 'History' )
 
-  userBooks = books.filter( (bk) => {
-    return bk.publish >= 1995 && bk.genre ===  'History'
-})
+userBooks = books.filter( (bk) => { 
+    return bk.publish >= 1995 && bk.genre === 'History'
+} )
 
-  console.log(userBooks);
+console.log(userBooks);
