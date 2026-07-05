@@ -5,34 +5,33 @@
 
 const coding = ["js", "ruby", "java", "py", "cpp"]
 
-// coding.forEach( function (value) {
-//     console.log(value);
-// } )
+coding.forEach(function (item) {
+    // console.log(item);
+})
 
-// ---------------------------------------------------------------------------
+// callback function is inside forEach()
 
-
-// coding.forEach( (item) => {
-//     console.log(item);
-// } )
-
-// ------------------------------------------------------------------------------
+// with arrow function
+coding.forEach( (item) => {
+    // console.log(item);
+} )
 
 
-// function printMe(item) {
-//     console.log(item);
-// }
-
+// with declaring seperate function and taking reference in forEach()
+function printMe(item) {
+    console.log(item);
+}
 // coding.forEach(printMe)
 
 
-// --------------------------------------------------------------------------------
- 
-// coding.forEach( (item, index, arr) => {
-//     console.log(item, index, arr);
-// } )
+// three parameters in forEach() - element, index and array 
+coding.forEach( (item, index, arr) => {
+    // console.log(item, index, arr);
+} )
 
 // -------------------------------------------------------------------------------
+// [{}, {}, {}]
+// objects inside array (mostly these values comes from db)
 
 const myCoding = [
     {
