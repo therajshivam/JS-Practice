@@ -62,7 +62,7 @@ console.log(order);
 Store the returned function in a variable named `teaMaker` and call it with `"green tea"`. 
 */
 
-
+// closure
 function createTeaMaker() {
     return function(teaType) {
         return `Making ${teaType}`
