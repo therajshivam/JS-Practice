@@ -45,6 +45,30 @@ console.log(totalCost);
 Return the result of calling `makeTea`.
 */
 
-function processTeaOrder(params) {
-    
+// higher order function
+function makeTea(typeTea) {
+    return `maketea : ${typeTea}`
 }
+
+function processTeaOrder(fn) {
+    return fn("earl grey")
+}
+
+let order = processTeaOrder(makeTea)
+console.log(order);
+
+/*
+05. Write a function named `createTeaMaker` that returns another function. The returned function should take one parameter, `teaType`, and return a message like `"Making green tea"`.
+Store the returned function in a variable named `teaMaker` and call it with `"green tea"`. 
+*/
+
+
+function createTeaMaker() {
+    return function(teaType) {
+        return `Making ${teaType}`
+    }
+}
+
+let teaMaker = createTeaMaker()
+let result = teaMaker("green tea")
+console.log(result);
