@@ -73,3 +73,51 @@ console.log(highestSalary);
 console.log(highestSalary.salary);
 */
 
+/*
+// 4. Word Analyzer
+const sentence = "JavaScript is Awesome and JavaScript is Powerful";
+
+for (const characters of sentence) {
+    console.log(`${characters}`);
+}
+console.log(`total characters : ${sentence.length}`);
+
+const wordArray = sentence.split(" ");
+for (const words of wordArray) {
+    console.log(`${words}`);
+}
+console.log(`total words : ${wordArray.length}`);
+
+const longestWord = wordArray.reduce( (max, word) => word.length > max.length ? word : max)
+console.log(longestWord);
+
+console.log(wordArray.includes("Awesome"));
+console.log(sentence.toUpperCase());
+console.log(sentence.toLowerCase());
+console.log(sentence.replaceAll("JavaScript", "JS"));
+
+// 5. Movie Database
+const movies = [
+ {title:"Inception", rating:9},
+ {title:"Avatar", rating:7},
+ {title:"Interstellar", rating:10},
+ {title:"Jawan", rating:8}
+]
+
+movies.forEach( movie => console.log(movie.title))
+
+const highRatedMovies = movies.filter(movie => movie.rating >= 8)
+console.log(highRatedMovies);
+
+const totalRating = movies.reduce( (total, movie) =>  total + movie.rating, 0 ) 
+console.log(totalRating);
+const avgRating = totalRating/movies.length
+console.log(avgRating);
+
+const highestRatedMovie = movies.reduce( (max, movie) => movie.rating > max.rating ? movie : max)
+console.log(highestRatedMovie);
+console.log(highestRatedMovie.title);
+
+const sortedMovies = [...movies].sort((a, b) => b.rating - a.rating)
+console.log(sortedMovies);
+*/
