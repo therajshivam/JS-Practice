@@ -37,4 +37,34 @@ for (const item of cart) {
     console.log(`${item.name} -> ${item.price * item.quantity}`);
 }
 
-const subTotal = 
+const subTotal = cart.reduce((acc, curr) => {
+    return acc + (curr.price * curr.quantity) 
+}, 0)
+console.log(`Sub Total : ${subTotal.toFixed(2)}`);
+
+const gst = subTotal*0.18
+console.log(`GST : ${gst.toFixed(2)}`);
+
+const finalAmount = subTotal + gst
+console.log(`Final Amount : ${finalAmount.toFixed(2)}`);
+
+// 3. Employee Database
+const employees = [
+ {name:"Rahul", salary:50000},
+ {name:"Shivam", salary:70000},
+ {name:"Aman", salary:45000},
+ {name:"Riya", salary:80000}
+]
+
+const employeeNames = employees.forEach( employees => console.log(employees.name));
+
+const highSalaryEmployees = employees.filter( employees => employees.salary > 50000)
+console.log(highSalaryEmployees);
+
+const totalSalary = employees.reduce( (acc, curr) => acc + curr.salary, 0)
+console.log(totalSalary);
+
+const averageSalary = totalSalary/employees.length
+console.log(averageSalary);
+
+const highestSalary = employees.forEach()
