@@ -1,3 +1,4 @@
+/*
 // 1. Student Report Card
 const student = {
     name: "Shivam",
@@ -19,12 +20,12 @@ console.log(`Highest Marks : ${highestMarks}`);
 const lowestMarks = Math.min(...marks)
 console.log(`Lowest Marks : ${lowestMarks}`);
 
-if (averageMarks >= 40) {
-    console.log("Pass");
-} else {
-    console.log("Fail");
-    
-}
+// if (averageMarks >= 40) {
+//     console.log("Pass");
+// } else {
+//     console.log("Fail");
+// }
+console.log(`Result : ${averageMarks >= 40 ? "Pass" : "Fail"}`);
 
 // 2. Shopping Cart
 const cart = [
@@ -56,7 +57,7 @@ const employees = [
  {name:"Riya", salary:80000}
 ]
 
-const employeeNames = employees.forEach( employees => console.log(employees.name));
+employees.forEach( employees => console.log(employees.name));
 
 const highSalaryEmployees = employees.filter( employees => employees.salary > 50000)
 console.log(highSalaryEmployees);
@@ -67,4 +68,8 @@ console.log(totalSalary);
 const averageSalary = totalSalary/employees.length
 console.log(averageSalary);
 
-const highestSalary = employees.forEach()
+const highestSalary = employees.reduce( (highest, employee) => employee.salary > highest.salary ? employee : highest)
+console.log(highestSalary);
+console.log(highestSalary.salary);
+*/
+
