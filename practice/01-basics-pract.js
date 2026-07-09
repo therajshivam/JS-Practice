@@ -121,3 +121,84 @@ console.log(highestRatedMovie.title);
 const sortedMovies = [...movies].sort((a, b) => b.rating - a.rating)
 console.log(sortedMovies);
 */
+
+/*
+// 6. Bank Account
+const account = {
+  holder: "Shivam",
+  balance: 15000,
+};
+
+function checkBalance() {
+  console.log(
+    `Account Holder : ${account.holder} \nAccount Balance : ${account.balance}`,
+  );
+}
+checkBalance();
+
+function deposit(amount) {
+  if (amount <= 0) {
+    console.log("Please enter a valid amount.");
+    return;
+  }
+
+  account.balance += amount;
+
+  console.log(`${amount} deposited successfully.`);
+  checkBalance()
+}
+deposit(5000);
+
+function withdraw(amount) {
+  if (amount <= 0) {
+    console.log("Please enter a valid amount.");
+    return;
+  }
+  if (account.balance >= amount) {
+    account.balance -= amount;
+    console.log(`${amount} withdrawn successfully.}`);
+    checkBalance()
+  } else {
+    console.log(`Insufficient Balance!`);
+  }
+}
+withdraw(10000);
+*/
+
+// Q7 – Library Management
+const library = [
+    { title: "Atomic Habits", available: true },
+    { title: "Deep Work", available: false },
+    { title: "Clean Code", available: true },
+    { title: "The Pragmatic Programmer", available: true }
+];
+
+const availableBooks = library.filter( books => books.available === true)
+console.log(availableBooks);
+
+const unavailableBooks = library.filter(books => books.available === false)
+console.log(unavailableBooks.length);
+
+function bookExists(title) {
+    return library.some(book => book.title.toLowerCase() === title.toLowerCase())
+}
+console.log(bookExists("atomic habits"));
+
+function borrowBook(title) {
+    const foundBook = ( book => book.title.toLowerCase() === title.toLowerCase())
+
+    if (!bookExists) {
+        console.log(`Book not found!`);
+        return;
+    }
+
+    if(!foundBook.available){
+        console.log(`Books is currently unavailable`);
+        return;
+    }
+
+    foundBook.available = false;
+    console.log(`Success! You have borrowed "${foundBook.title}".`);
+}
+
+borrowBook("clean code")
