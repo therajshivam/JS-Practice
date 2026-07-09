@@ -1,37 +1,32 @@
 // 1. Student Report Card
-/*
 const student = {
     name: "Shivam",
     marks: [78, 82, 91, 67, 88]
 }
 
+console.log(`Student Name : ${student.name}`);
+
 const {marks} = student;
+const totalMarks = marks.reduce( (acc, curr) => {
+    return acc + curr;
+},0)
+console.log(`Total Marks : ${totalMarks}`);
 
-console.log(student.name);
-
-const total = marks.reduce((acc, curr) => acc+curr, 0)
-console.log(total);
-
-const length = marks.length
-console.log(length);
-const avg = total/length
-console.log(avg);
-
+const averageMarks = totalMarks/(marks.length)
+console.log(`Average Marks : ${averageMarks.toFixed(2)}`);
 const highestMarks = Math.max(...marks)
-console.log(highestMarks);
-
+console.log(`Highest Marks : ${highestMarks}`);
 const lowestMarks = Math.min(...marks)
-console.log(lowestMarks);
+console.log(`Lowest Marks : ${lowestMarks}`);
 
-if(avg >= 40) {
-    console.log(`result = pass`);
+if (averageMarks >= 40) {
+    console.log("Pass");
 } else {
-    console.log(`result = fail`);
+    console.log("Fail");
+    
 }
-*/
 
 // 2. Shopping Cart
-/*
 const cart = [
     {name:"Keyboard", price:1200, quantity:2},
     {name:"Mouse", price:600, quantity:1},
@@ -39,25 +34,7 @@ const cart = [
 ]
 
 for (const item of cart) {
-    console.log(`${item.name} : ${item.price}`);
+    console.log(`${item.name} -> ${item.price * item.quantity}`);
 }
 
-const subTotal = cart.reduce((sum, item) => {
-    return sum + (item.price * item.quantity)
-},0)
-console.log(`Subtotal : ${subTotal}`);
-
-const gstAmount = subTotal * 0.18
-console.log(`GST(18%) : ${gstAmount}`);
-
-const grandTotalAmount = subTotal + gstAmount
-console.log(`Final amount to pay : ${grandTotalAmount}`);
-*/
-
-// 3. Employee Database
-const employees = [
- {name:"Rahul", salary:50000},
- {name:"Shivam", salary:70000},
- {name:"Aman", salary:45000},
- {name:"Riya", salary:80000}
-]
+const subTotal = 
