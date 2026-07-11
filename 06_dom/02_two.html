@@ -1,4 +1,5 @@
-<!-- DOM NEW ELEMENT -->
+<!-- DOM Traversal -->
+<!-- Accessing elements of DOM through parent-child relation -->
 <!-- Relation - Parent; Child  -->
 
 <!DOCTYPE html>
@@ -10,6 +11,7 @@
 </head>
 <body style="background-color: #212121; color: #fff;">
     <div class="parent">
+        <!-- comment -->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
@@ -18,30 +20,37 @@
 </body>
 
 <script>
-    const parent = document.querySelector('.parent')
-    // console.log(parent);              // it gave parent class
-    // console.log(parent.children);       // it gave htmlCollection  
-    // console.log(parent.children[1]);     // for accessing first element
-    // console.log(parent.children[1].innerHTML);     
+    const parent = document.querySelector('.parent')  // selecting .parent class
+    console.log(parent);   
 
-    // looping using for loop
+    console.log(parent.children);       // it gave htmlCollection of selected class' child elements
+    console.log(parent.children[1]);     // for accessing first child element
+    console.log(parent.children[1].innerHTML);    
+
+    // looping HTMLCollections using for-loop, on html collection we can use for-loop
     for (let i = 0; i < parent.children.length; i++) {
-        // console.log(parent.children[i].innerHTML);       // prints all vales  
+        console.log(parent.children[i].innerHTML);       // prints all values of child elements  
     }
 
-    parent.children[1].style.color = "orange"          // styling an element 
-    // console.log(parent.firstElementChild);         // gives first child
-    // console.log(parent.lastElementChild);         // gives last child
+    parent.children[1].style.color = "orange"          // styling first child element 
+
+    // accessing child element
+    console.log(parent.firstElementChild);         // gives first child
+    console.log(parent.lastElementChild);         // gives last child
 
     // child to parent
-
-    const dayOne = document.querySelector('.day')
-    // console.log(dayOne);                        // selects the child elements
-    // console.log(dayOne.parentElement);          // selects the parent
-    // console.log(dayOne.nextElementSibling);     // selects next adjecent element 
+    const dayOne = document.querySelector('.day')   // selects the first child element
+    console.log(dayOne);                        
+    console.log(dayOne.parentElement);          // prints its parent
+    console.log(dayOne.nextElementSibling);     // prints next adjecent element 
  
     // nodeList
-    console.log("NODES: ",parent.childNodes);
+    console.log("NODES: ", parent.childNodes); // gives values 11 nodelist
+    // nodelist(childNodes) is a complex tree structure
+    // linebreak is also a node
+    // in html only one linebreak is considered after whatever linebreak given it will not considered
+    // comment is also a nodelist
 
  </script>
+
 </html>
