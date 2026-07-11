@@ -46,36 +46,23 @@ title.innerHTML
 ###### QUERY SELECTOR #######
 
 document.querySe1ector('h1')
-
-<h1 id="title" class="heading">
-"DOM Learning on Chai and Code "
-<span style="display: none; ">test text</span>
-</h1>
+<h1 id="title" class="heading"> "DOM Learning on Chai and Code "<span style="display: none; ">test text</span> </h1>
 ** gives first element of same element types
 
 document.querySelector('h2')
 <h2>Lorem ipsum dolor sit amet. 1</h2>
 
 document.querySelector('#title')  ** selecting an id
-
 document.querySelector('.heading')  ** selecting a class
 
 document.querySelector('input[type="password"]') **  selecting an input tag with an attribute
-
 document.querySelector('p:first-child') ** can be use to select more specific type of selectors
 
-document.querySelector('ul')
-** selecting ul
+document.querySelector('ul') --> ** selecting ul
+const myul = document.querySelector('ul') --> ** storing ul in a variable  
+myul.querySelector('li') --> ** selecting the first li
 
-const myul = document.querySelector('ul')
- ** storing ul in a variable  
-
-myul.querySelector('li')
-** selecting the first li
-
-const turnGreen = myul.querySelector('li')
-** storing li in const
-
+const turnGreen = myul.querySelector('li') --> ** storing li in const
 turnGreen.style.backgroundColor = 'green'
 turnGreen.style.padding = '16px' 
 ** changing color and padding
@@ -91,7 +78,6 @@ turnGreen.innerText = "five"
 -------------------------------
 
 ###### NODE LIST #######
-
 
 document.querySelectorAll
 
@@ -132,10 +118,10 @@ tempLiList.forEach(function (l) {
 })
 ** set the background color as blue
 
+** to apply array methods first change nodelist into array and then apply its methods
 -------------------------------
 
 ###### HTML COLLECTION #######
-
 
 document.getElementsByClassName('list-item')
 HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
@@ -188,3 +174,4 @@ myH3.forEach(function(h) {
     h.innerText = 'Test'
 })
 undefined
+**changes the color in the page
