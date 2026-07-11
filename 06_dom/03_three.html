@@ -1,4 +1,5 @@
 <!-- Creating new element in HTML -->
+<!-- creating nodelists programetically -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,19 +13,37 @@
 </body>
 
 <script>
-    const div = document.createElement('div')      // creating an element 
-    console.log(div);                              // printing that element  
-    div.className = "main"                         // adding class
-    // div.id = "myId"                             //  adding id
-    div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")   // for adding custom attribute 
-    div.style.backgroundColor = "green"             // styling background color
-    // div.innerText = "Hello World"                  // adds the text inside the div
-    //  try to avoid this innerText beacause it overrides the existing value;
-    // preefer using createTextNode
-    const addText = document.createTextNode("Hello World!")
-    div.appendChild(addText)
 
-    document.body.appendChild(div)           // adding th etext in the document body
+    // create an element
+    const div = document.createElement('div')   // creating a div element
+    console.log(div);
+
+    // adding attributes in the div
+    div.className = "main"    // adding class
+    div.id = "myId"           // adding id
+    // div.id = Math.round(Math.random()*10+1)  // fun experiment
+
+    // setting custom attribute with key and value
+    div.setAttribute("title", "generated title");
+    div.style.backgroundColor = "orange";
+    div.style.padding = "12px";
+    // div.innerText = "Chai aur Code";
+    // these dot properties like .innerText, etc, will take two rounds to change the attribute as first it go and get existing attributes and values and then it will change it in the second round.
+    // Hence, to avoid this double round, prefer to use .setAttribute("attribute", "value") as it will set the value directly in a single round.
+    // What is prefered instead of .innerText:
+    const addText = document.createTextNode("Chai aur Code");  // this will create a text node
+    // adding the text node into the div element
+    div.appendChild(addText);
+
+    // this div is still in the memory, now we will attach it to the page
+    document.body.appendChild(div);
+
+    // short explaination:
+    // setAttribute() is useful for setting HTML attributes directly. createTextNode() + appendChild() is often preferred when creating new elements because it avoids parsing HTML strings and is a clean way to build DOM nodes.
+
+
+    // now we can also add this into a function to create a new div by passing arguments like different texts or bgcolor.
+    // we can also iterate a loop of an array of 5 different colors and use these color bgcolors and these texts.
 </script>
+
 </html>
