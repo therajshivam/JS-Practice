@@ -39,5 +39,20 @@
         book.style.background = "purple";
       }
     });
+
+    // task 4
+
+    const parent = document.querySelector("ul")
+    const oldBook = parent.children[1]
+    const updateBook = document.createElement('li')
+    updateBook.textContent = "Deep Work 2.0"
+    oldBook.replaceWith(updateBook) 
+
+    const heading = document.querySelector('h1')
+    heading.outerHTML = '<h1>📚 My Personal Library</h1>'
+    
+    const lastBook = parent.lastElementChild
+    lastBook.remove()
+
   </script>
 </html>
