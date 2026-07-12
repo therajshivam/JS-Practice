@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+  </head>
+  <body>
+    <h1 id="title" class="heading">
+      Student Dashboard <span style="display: none">Hidden</span>
+    </h1>
+
+    <p class="description">Welcome to DOM Practice</p>
+
+    <input type="text" placeholder="Enter Name" />
+
+    <button>Save</button>
+  </body>
+  <script>
+    console.log(document.getElementById("title"));
+    const h1 = document.querySelector("#title");
+    console.log(h1.id);
+    console.log(h1.className);
+    console.log(h1.innerHTML);
+    console.log(h1.innerText);
+    console.log(h1.textContent);
+
+    h1.style.backgroundColor = "#0d6efd";
+    h1.style.color = "White";
+    h1.style.padding = "15px";
+    h1.style.borderRadius = "10px";
+
+    h1.setAttribute("title", "Student Dashboard");
+    console.log(h1.getAttribute("title"));
+
+    const inputEdit = document.querySelector("input");
+    inputEdit.placeholder = "Enter Full Name";
+    console.log(inputEdit.placeholder);
+  </script>
+</html>
