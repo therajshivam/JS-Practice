@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Programming Languages</h2>
+
+      <ul class="language-list">
+        <li class="language">JavaScript</li>
+        <li class="language">Python</li>
+        <li class="language">Java</li>
+        <li class="language">C++</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    const langName = document.querySelectorAll(".language");
+    console.log(langName);
+
+    langName.forEach((lang) => {
+      lang.style.color = "yellow";
+      lang.style.backgroundColor = "green";
+      lang.style.padding = "10px";
+    });
+
+    const languages = document.getElementsByClassName("language");
+    console.log(languages);
+    const langArr = Array.from(languages);
+    const languageList = langArr.map((lang) => lang.textContent);
+    console.log(languageList);
+
+    const parent = document.querySelector(".language-list");
+    console.log(parent.firstElementChild.innerHTML);
+    console.log(parent.lastElementChild.innerHTML);
+    const setId = (parent.children[2].id = "java-lang");
+
+    const java = document.querySelector("#java-lang");
+    console.log(java.parentElement);
+    console.log(java.previousElementSibling);
+    console.log(java.nextElementSibling);
+
+    console.log(parent.children);
+    console.log(parent.childNodes);
+  </script>
+</html>
