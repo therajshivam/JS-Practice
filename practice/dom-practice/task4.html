@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Employee Directory</title>
+  </head>
+
+  <body>
+    <h1>Employee Directory</h1>
+
+    <div class="employees"></div>
+  </body>
+
+  <script>
+    const employees = [
+      {
+        id: 1,
+        name: "Shivam",
+        age: 22,
+        role: "QA Engineer",
+        experience: 1,
+      },
+      {
+        id: 2,
+        name: "Rahul",
+        age: 26,
+        role: "Frontend Developer",
+        experience: 4,
+      },
+      {
+        id: 3,
+        name: "Aman",
+        age: 20,
+        role: "Backend Developer",
+        experience: 0,
+      },
+      {
+        id: 4,
+        name: "Riya",
+        age: 28,
+        role: "UI/UX Designer",
+        experience: 5,
+      },
+    ];
+
+    function createCard() {
+      employees.forEach((employee) => {
+        const div = document.createElement("div");
+        div.className = "card";
+
+        const h2 = document.createElement("h2");
+        h2.appendChild(document.createTextNode(`Name : ${employee.name}`));
+
+        const roleP = document.createElement("p");
+        roleP.appendChild(document.createTextNode(`Role : ${employee.role}`));
+
+        const ageP = document.createElement("p");
+        ageP.appendChild(document.createTextNode(`Age : ${employee.age}`));
+
+        const experienceP = document.createElement("p");
+        experienceP.appendChild(
+          document.createTextNode(`Experience : ${employee.experience}`),
+        );
+
+        if (employee.experience >= 3) {
+          div.style.background = "green";
+        } else {
+          div.style.background = "#333";
+        }
+        div.style.padding = "15px";
+        div.style.margin = "15px";
+        div.style.borderRadius = "10px";
+        div.style.color = "white";
+
+        if (employee.experience === 0) return;
+
+        div.append(h2, roleP, ageP, experienceP);
+        if (employee.experience >= 5) {
+          const seniorEmp = document.createElement("p");
+          seniorEmp.appendChild(document.createTextNode(`⭐ Senior Employee`));
+          div.appendChild(seniorEmp);
+        }
+        document.querySelector(".employees").appendChild(div);
+      });
+    }
+    createCard()
+
+    const heading = document.querySelector("h1");
+    const newHeading = document.createElement("h1");
+    newHeading.textContent = "Company Employees";
+    heading.replaceWith(newHeading);
+  </script>
+</html>
