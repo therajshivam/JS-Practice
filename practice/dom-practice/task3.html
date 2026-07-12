@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-3</title>
+  </head>
+  <body>
+    <h1>My Library</h1>
+
+    <ul class="books"></ul>
+  </body>
+  <script>
+    const books = [
+      "Atomic Habits",
+      "Deep Work",
+      "Clean Code",
+      "The Pragmatic Programmer",
+      "Design Patterns",
+    ];
+
+    function addBooks(bookName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(`${bookName}`));
+      document.querySelector(".books").appendChild(li);
+    }
+    for (let i = 0; i < books.length; i++) {
+      addBooks(books[i]);
+    }
+
+    const liBooks = document.querySelectorAll("li");
+    const booksArr = Array.from(liBooks);
+    booksArr.forEach((book) => {
+      book.style.padding = "10px";
+      book.style.margin = "5px";
+      book.style.background = "teal";
+      book.style.color = "white";
+      if (book.textContent.includes("Code")) {
+        book.style.background = "purple";
+      }
+    });
+  </script>
+</html>
