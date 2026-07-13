@@ -176,8 +176,8 @@
     );
 
     //++++++++++++++++++++++++++++++++++++++++++++++++
-    // activities
-    // 1. when clicked on any image it get disappeared
+    // Event Delegation
+    // task : when clicked on any image it get disappeared
 
     document.querySelector("#images").addEventListener("click", function (e) {
       console.log(e.target.parentNode);
@@ -188,6 +188,8 @@
         removeIt.remove();
       }
     });
+
+    // Event Delegation is a technique where we attach a single event listener to a parent element instead of attaching listeners to each child. Using event bubbling and event.target, we determine which child triggered the event.
 
     // removeIt.parentNode.removeChild(removeIt) -- in older codes instead of remove()
   </script>
