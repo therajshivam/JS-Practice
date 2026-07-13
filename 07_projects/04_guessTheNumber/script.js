@@ -73,7 +73,7 @@ function displayMessage(message) {
 function endGame() {
   // end the game
   userInput.value = '';
-  userInput.setAttribute('disbled', '');
+  userInput.setAttribute('disabled', '');
   p.classList.add('button');
   p.innerHTML = `<h2 id="newGame"> Start A New Game </h2>`;
   startOver.appendChild(p);
