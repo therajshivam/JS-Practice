@@ -1,94 +1,66 @@
 <!-- html events -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=4, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=4, initial-scale=1.0" />
     <title>Events</title>
-</head>
-<body style="background-color: #414141; color: aliceblue;">
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
     <h2>Amazing image</h2>
-    <div >
-        <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
-            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
-        </ul>
-   </div>
-</body>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
 
-<!-- 
-
-    // EVENTS
-
-    // onclick="alert('owl')" 
-    // not a fiseable way and not scalable
-    // written in html
-
-
-    // document.getElementById('owl').onclick = function() {
-    //     alert("owl clicked") 
-    // }
-    // gives less features and not suppoert propogation
-    
-
-    // document.getElementById('owl').addEventListener('click' , function(e){
-    //     alert("owl clicked ")
-    // } , false )
-    // best approach
-    //third parameter in false , false is default .. interview
-    // e => event object
-
-    // basic events to study:
-    // type, timeStamp, preventDefault
-    // target, toElement, srcElement, currentTarget
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
-
-
-    //++++++++++ EVENT PROPOGATION +++++++++++++++++
-    
-
-    // two context of event propogation:
-    // 1. Event Bubbling : default false ; mainly uses
-    // 2. Event Capturing : 
-
-    // how event propogation is done and how to stop it?
-    // preventDefault()
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, false)
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked");
-    }, false) 
-
-    // ++++++++++++++++++
-
-    // document.querySelector('#images').addEventListener
-    // ('click', function (e) {
-    //     console.log(e.target.parentNode);
-    //     let removeIt = e.target.parentNode
-    //    removeIt.remove()
-    //    // removeIt.parentNode.removeChild(removeIt)
-    // })
-
-    document.querySelector('#images').addEventListener
-    ('click', function (e) {
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }  
-    })
-
-    
-</script> -->
-
-<script>
+  <script>
     // in js, events run sequentially.
     // exceptions are some events and async.
     // events invoke on activities.
@@ -101,16 +73,24 @@
     // } // -- this is not a good approach, gives less features and not suppoert propogation
 
     // this is a good approach
-    document.getElementById('owl').addEventListener('click', function () {
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
         // alert("owl clicked")
-    }, false)
+      },
+      false,
+    );
     // best approach
     //third parameter in false , false is default .. interview
     // e => event object
 
-    document.getElementById('owl').addEventListener('click', function (e) {
-        console.log(e) // this will give PointerEvent
-    },false)
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e) // this will give PointerEvent
+      },
+      false,
+    );
     // PointerEvent will contain mostly browser and environment events
 
     // basic events to study:
@@ -121,9 +101,94 @@
 
     //++++++++++ EVENT PROPOGATION +++++++++++++++++
 
+    // two context of event propogation:
+    // 1. Event Bubbling : default false ; mainly uses
+    // 2. Event Capturing : true ; in some scenarios
 
+    // how event propogation is done and how to stop it?
+    // event bubbling
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked inside the ul");
+      },
+      false,
+    );
 
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        console.log("owl clicked");
+      },
+      false,
+    );
 
-</script>
+    // targeting ul and the owl image
+    // owl is having both, which will be print first
+    // concept of bubbling up, (anology : bubble goes from below to above)
+    // hence, event tracking will be from below to upper
+    // therefore, first it will "owl clicked" event will invoke and then "clicked inside the ul" will get invoked
 
+    // event capturing
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked inside the ul");
+      },
+      true,
+    );
+
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        console.log("owl clicked");
+      },
+      true,
+    );
+
+    // capturing works from top to bottom
+    // therefore, first it will "clicked inside the ul" event will invoke and then "owl clicked" will get invoked
+
+    // event bubbling and event capturing depends on the usecase.
+
+    // scenario : if we dont want bubbling, instead we want it not to pass from all events. we want that our outer event remains seperate from the inner event.
+    // in scenario we use "e.stopPropagation())"
+
+    document.getElementById("images").addEventListener("click", function (e) {
+      console.log("clicked inside the ul");
+    });
+
+    document.getElementById("owl").addEventListener("click", function (e) {
+      console.log("owl clicked");
+      e.stopPropagation();
+    });
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // preventDefault()
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        console.log("google clicked");
+        e.preventDefault();
+      },
+      false,
+    );
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++
+    // activities
+    // 1. when clicked on any image it get disappeared
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.parentNode);
+      console.log(e.target.tagName);
+
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+
+    // removeIt.parentNode.removeChild(removeIt) -- in older codes instead of remove()
+  </script>
 </html>
