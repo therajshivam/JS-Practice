@@ -1,30 +1,39 @@
-<!DOCTYPE html>
+<!-- api request : xmlHttpReuest() -->
+<!-- it is AJAX programming related -->
+<!-- old way before launch of fetch() api -->
+
+<!-- XMLHttpRequest: readyState property -->
+<!-- Value	State	            Description
+0	    UNSENT	            Client has been created. open() not called yet.
+1	    OPENED	            open() has been called.
+2	    HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	    LOADING	            Downloading; responseText holds partial data.
+4	    DONE	            The operation is complete. -->
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="background-color: #212121;">
-    Value	State	Description
-0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
-</body>
-<script>
-    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+  </head>
+  <body style="background-color: #212121; color: white"></body>
+
+  <script>
+    const requestUrl = "https://api.github.com/users/therajshivam";
+    // ajax request is sent here through XMLHttpRequest
+    // it is almost a class hence use a "new" to make it an object
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data.followers);
-        }
-    }
+    // open() sends the request
+    xhr.open("GET", requestUrl);
+    // to track readyState continously : onreadystatechange()
+    xhr.onreadystatechange = function name(params) {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(data.followers);
+      }
+    };
     xhr.send();
-</script>
+  </script>
 </html>
