@@ -1,59 +1,51 @@
-<!-- async basics -->
+<!-- async -->
+<!-- setTimeout(), clearTimeout() -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>New Doc</h1>
+  </head>
+  <body>
+    <h1>Chai aur Code</h1>
     <button id="stop">Stop</button>
-</body>
+  </body>
 
-<!-- <script>
-    // setInterval, setTimeout, clearInterval, clearTimeout
+  <script>
+    // 1. setTimeout(handler, time)
+    // setTimeout is used to perform a task after given time.
+    // handler is a callback function without any name; it is a parameter inside setTimeout().
 
-
-    // => setTimeout is a function which give timeout after which the function is executed  
-    // setInterval is a function which do the work after given time repeately  
-    // handler => a callback function whih dont have any name
-    // timeout => a number
-
+    // setTimeout syntax
     // setTimeout(function () {
     //     console.log("Hello");
-    // }, 2000  ) // after 2sec hello will be printed
+    // }, 2000)
 
-    const sayHello = function () {
-        console.log("Hello");
-    }
-    
-    setTimeout(sayHello, 2000)
+    // setTimeout by taking function as a reference
+    // const sayHello = function () {
+    //     console.log("Hello");
+    // }
+    // setTimeout(sayHello, 2000)
 
-    // changing the name
-    const changeText = function () {
-        document.querySelector('h1').innerHTML = "Hello to All"
-    }
-    const changeMe = setTimeout(changeText, 2000)
-
-    // => clearTimeout
-
+    // setTimeout inside the DOM
+    // const changeText = function () {
+    //     document.querySelector('h1').innerHTML = "best JS series"
+    // }
+    // const changeMe = setTimeout(changeText, 2000)
+    // how to stop this event ? -- clearTimeout()
+    // clearTimeout wants reference.
     // clearTimeout(changeMe)
 
-    document.querySelector('#stop').addEventListener('click', function(e){
-        clearTimeout(changeMe)
-        console.log("STOPPED");
-    })
-
-
-
-
-    
-</script> -->
-
-<script>
-    
-</script>
-
+    // anotherWay with interacting with dom button with event
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best JS series";
+    };
+    const changeMe = setTimeout(changeText, 2000);
+    document.querySelector("#stop").addEventListener("click", function (e) {
+      clearTimeout(changeMe);
+      console.log("STOPPED!");
+    });
+  </script>
 </html>
