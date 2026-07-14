@@ -1,40 +1,55 @@
 <!-- async -->
 <!-- setInterval(), clearTimeout() -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Chai Aur JavaScript</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
-    
-</body>
-<!-- <script>
-    // setInterval()
-    // used to perform a task in an interval of time repeatedly
+  </body>
 
-
-    const sayDate = function (str) {
-        // console.log("Hello", Date.now());
-        console.log(str, Date.now());
-    }
-
-    const intervalId = setInterval(sayDate, 1000, "hi")
-
-    clearInterval(intervalId)
-
-</script> -->
-
-<script>
+  <script>
     // 3. setInterval(handler, timeout)
     // used to perform a task in an interval of time repeatedly
 
+    // syntax
+    // setInterval(function(){
+    //     console.log("Hello", Date.now());
+    // },1000)
 
-</script>
+    // taking function as a reference
+    // const sayDate = function(str){
+    //     console.log( str, Date.now());
+    // }
+    // setInterval(sayDate, 1000, "hi")
 
+    // 4. clearInterval()
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+    const intervalId = setInterval(sayDate, 1000, "hi");
+    clearInterval(intervalId);
+
+    // with dom
+    const startButton = document.querySelector("#start");
+    const stopButton = document.querySelector("#stop");
+
+    const printTime = function (params) {
+      let time = new Date();
+      console.log(time.toLocaleTimeString());
+    };
+    let startInterval;
+    startButton.addEventListener("click", function (e) {
+      startInterval = setInterval(printTime, 1000);
+    });
+    stopButton.addEventListener("click", function (e) {
+      clearInterval(startInterval);
+    });
+  </script>
 </html>
