@@ -78,4 +78,13 @@ console.log(userOne.constructor); // output : [Function: User]
  
 // constructor function have concepts of abstraction and encapsulation
 
-// learn about instanceof
+// instanceof
+// checks whether an object's prototype chain contains the prototype of a given constructor or class. 
+// returns boolean values : true/false
+
+function Animal() {}
+const dog = new Animal();
+
+console.log(dog instanceof Animal); // true
+console.log(dog instanceof Object); // true
+console.log(dog instanceof Array); // false
