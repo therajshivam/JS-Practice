@@ -1,17 +1,17 @@
 # JS and Classes
 
-javascript have classes but classes are just syntactic sugar
-behind the hood there is only prototype based inherited mechanism
-js is prototype based language
+javascript have classes but classes are just syntactic sugar.
+behind the hood there is only prototype based inherited mechanism.
+js is prototype based language.
 
 ## OOPS
+object oriented programming. In js it is just a programming paradigm
 
 ## Object
-- collection of properties(variables and constant) and methods(functions) 
-- toLowerCase
+- collection of properties(variables and constant) and method (functions) 
 
 ## why use OOPS
-- because code was messed up
+- to write clean code and avoid spaghetti code
 
 ## parts of oops
 Object literal -> actually taking an object
@@ -21,9 +21,9 @@ Object literal -> actually taking an object
 - Classes                  
 - Instances (new, this)
 
-# 4 pillars
+## 4 pillars
 
-- Abstraction 
-- Encapsulation 
+- Abstraction (hiding details ex: fetch)
+- Encapsulation (wraping up the data ex: methods)
 - Inheritance 
-- Polymorphism
+- Polymorphism 
