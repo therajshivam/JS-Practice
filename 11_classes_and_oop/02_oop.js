@@ -1,60 +1,81 @@
-// object literals 
-// literally making an object ; it is base unit
+
+// OBJECT LITERALS
+// literally making an object  
+// it is the base unit in js
 
 const user = {
     username: "shivam",
-    loginCount: 8, 
+    loginCount: 5,
     signedIn: true,
 
-    getUserDetails: function() {
-        // console.log("got user details from DB");
-        // console.log(`Username: ${this.username}`);
-        console.log(this); // current context
+    getUserDetails: function () {
+        console.log("Got user details from DB");
+        console.log(`Username: ${this.username}`);
+        console.log(this); // current context for this "this"
     }
 }
 
 // console.log(user.username);
 // console.log(user.getUserDetails());
-// console.log(this); // global context : gives empty {}; changes in browser
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// this keyword is used to give current context. 
+// console.log(this);
+// global context this - gives empty {}
+// this global context changes, in browser we get window object which is global object with this.
+
+// constructor function is used to minimize the repetiton of making many objects of similar type.
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // CONSTRUCTOR FUNCTION
+// Constructor functions are blueprints used to create multiple similar objects.git 
+// constructor function allows to create multiple instances from one object literal. 
+// it gives a new instance (copy)
 
-// constructor function allow us to make multiple instances from one instance
+// const promiseOne = new Promise();
+// const date = new Date();
 
-// const promiseOne = new Promise()
-// const date = new Date()
-
-// "new" keyword is a constructor function
+// new keyword is a constructor function.
+// some values like promise, date ; we want new instance and dont want to affect old values, and keep their own values.
+// new keyword is use to create new context and is called constructor function.
 
 function User(username, loginCount, isLoggedIn) {
+
+    // properties
     this.username = username
+    // left side username is variable name and right side username is value passed 
     this.loginCount = loginCount
     this.isLoggedIn = isLoggedIn
 
-    this.greeting = function(){
+    // methods
+    this.greetings = function () {
         console.log(`Welcome ${this.username}`);
-
     }
 
-    // return this   // pass on the object
-    // if we write or not return this funtion , it will implicitly get define,no need to do
+    return this
 }
 
-const userOne = new User("shivam", 12, true)
-// const userTwo = User("hitesh", 11, false)  // overrides the value; there fore use "new"
-const userTwo = new User("hitesh", 11, false)
-console.log(userOne.constructor);  // constructor property is reference of its own
+// if we dont "return this" here : its default implicitly defined 
+
+const userOne = new User ("hitesh", 12, true)
+const userTwo = new User ("ChaiAurCode", 11, false)
+console.log(userOne);
+// here userTwo overrided all the values 
+// to avoid this issue use new(constructor function) for geting a new instance
 console.log(userTwo);
 
-// constructor function gives new instance always
-
-// when a "new" keyword is use, sabse phle empty object create hota hai jisko instance bola jata hai
-// steps:
-// 1. naya object create hua hai
-// 2. constructor function call hota hai new keyword k karan;ye jitne bhi arguments hai use pack krta hai
-// 3. this keyword will inject in it  
-// 4. we get it in a function
+// internal working : 
+// when new keyword is use:
+    // 1. an empty object is created and is called instance.
+    // 2. a constructor function is called because of new keyword, it packs all the arguments and pack it in it and give.
+    // 3. all the arguments get inject into this keyword.
+    // 4. it get through function to us.
 
 
-// study about instaceof method 
+// Constructor Property :
+// it is reference about its own
+console.log(userOne.constructor); // output : [Function: User]
+ 
+// constructor function have concepts of abstraction and encapsulation
+
+// learn about instanceof

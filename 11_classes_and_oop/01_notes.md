@@ -12,6 +12,7 @@ object oriented programming. In js it is just a programming paradigm
 
 ## why use OOPS
 - to write clean code and avoid spaghetti code
+- code reusablity
 
 ## parts of oops
 Object literal -> actually taking an object
