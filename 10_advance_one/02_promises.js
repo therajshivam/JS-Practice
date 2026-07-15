@@ -149,4 +149,35 @@ fetch("https://api.github.com/users/therajshivam")
   })
   .catch((error) => console.log(error));
 
-// github data comes before the earlier promises
+// github data comes before the earlier promises?
+// because it is sent through fetch and fetch have a high priority micro task queue and it is a special task queue for the fetch only. this queue is faster. this will come first in the call stack.
+
+// fetch() - global fetch() method, starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+
+//  A fetch() promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar). A fetch() promise does not reject on HTTP errors ( 404 , etc.). Instead, a then() handler must check the Response.ok and/or Response.status properties.
+
+// internal working of fetch()
+/*
+  response = fetch("something") is divided into two parts :
+    1. data 
+    2. web browser
+
+
+  1. Data[] : is empty space reserved in the memory.  
+        - onFulfilled[]
+      - onRejected[]
+
+  2. Web Browser 
+        - network request - it is either successful or fail
+
+  After fetch is invoked - it get divided into two parts :
+  first - a memory space is reserved.
+  second - browser/ node sends a network request.
+
+  - if the network request is successful, received data got stored in onFulfilled[] as resolve/resolution.
+
+  - if the network request is failed, error get stored in onRejected[] as reject/rejection.
+
+  After all this, onFulfilled[] or onRejected[] whatever is recieved, it get stored into Data[] variable. And finally the data variable get into the response variable (response = fetch("something")) which we declared at the start into the global memory.
+
+  */
