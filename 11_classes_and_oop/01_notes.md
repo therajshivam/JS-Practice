@@ -1,6 +1,6 @@
 # JS and Classes
 
-javascript has classes but classes are just syntactic sugar
+javascript have classes but classes are just syntactic sugar
 behind the hood there is only prototype based inherited mechanism
 js is prototype based language
 
