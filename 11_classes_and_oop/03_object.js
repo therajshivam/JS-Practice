@@ -33,7 +33,7 @@ console.log(multiplyBy5.prototype); //{}
 
 /*
 Understandings :
-    - In JS everything is object.
+    - Almost everything in JavaScript behaves like an object.
     - Function's working behaves like a function but if we want then we can make function behave like an object too.
     - Which means : 
         Function -----> Object -----> null
