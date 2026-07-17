@@ -1,12 +1,21 @@
-class User {
+// static keyword
+
+class User{
     constructor(username){
         this.username = username
     }
 
     logMe(){
-        console.log(`Username: ${this.username}`);
+        console.log(`Username is ${this.username}`); 
     }
 
+    // we want after creation of user immediately gets a unique id
+    // createId(){
+    //     return `123`
+    // }
+
+    // sometimes we dont want to give access of this method to all objects instanctiate from this method
+    // in that case we use 'static' keyword
     static createId(){
         return `123`
     }
@@ -14,10 +23,6 @@ class User {
 
 const hitesh = new User("hitesh")
 // console.log(hitesh.createId())
-
-
-// static : dont allow to give access to a particular method or property
-
 
 class Teacher extends User {
     constructor(username, email){
@@ -27,4 +32,4 @@ class Teacher extends User {
 }
 
 const iphone = new Teacher("iphone", "i@phone.com")
-console.log(iphone.createId());
+iphone.logMe();
