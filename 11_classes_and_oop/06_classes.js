@@ -20,7 +20,7 @@ class User {
     }
 }
 
-const chai = new User ("chai", "chai@code.in", "123")
+const chai = new User ("chai", "chai@code.in", "123") // object
 
 console.log(chai.encryptPassword());
 // console.log(chai.username.toUpperCase());
