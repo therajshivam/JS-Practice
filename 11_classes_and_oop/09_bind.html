@@ -14,10 +14,12 @@
             this.library = "React"
             this.server = "https://localhost:300"
 
-            //requirement
+            //requirement : react object loads immediately after page load.
             document
                 .querySelector('button')
                 .addEventListener('click', this.handleClick.bind(this))
+
+                // bind : not only giving manually reference but also attaching
 
         }
         handleClick(){
