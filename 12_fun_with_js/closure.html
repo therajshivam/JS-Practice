@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="orange" style="background-color: orange;color: aliceblue; padding: 20px; margin: 15px;">Orange</button>
+    <button id="green" style="background-color: green;color: aliceblue; padding: 20px; margin: 15px;">Green</button>
+  </body>
+
+  <script>
+    // lexical Scoping
+    // inner function have access to the scope of outer function
+    /*
+    function outer() {
+        let username = "hitesh"
+        console.log(secret);
+        
+        function inner() {
+            let secret = "my123"
+            console.log("inner", username);
+        }
+        function inner2(){
+            console.log("inner2", username);
+            console.log(secret);
+        }
+        inner()
+        inner2()
+    }
+    outer()
+    console.log("too outer", username);
+    */
+    // If a variable is declared inside a function, we dont have access of the variable outside of the function.
+    // If in a function, a variable declared. Its child functions (functions declared inside that main function) have access to the variable.
+    // If a variable declare inside any child function, then its sibling functions dont have access of the variable. Also its parent cant access the variable.
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    /*
+    Function scope is valid upto its execution.
+    If a function is execute then its scope is scope is gone.
+    If function's scope is gone then how lexical scope will work?
+        means - Until the outer function exists till then inner function had access of its scope. If the outer function is gone then what will happen?
+
+    Closure concept: although the function execution context of outer function is removed, but there comes the role of memory reference.
+
+    Take example of below function:
+    When myFunc runs it executes the makeFunc() function, and it will return the displayName function.
+    Then the displayName is returned, then not only displayName() function will go, but if its outer function exists then the outer function's scope will too go. Because of lexical scoping.
+
+    Whole memory will share not only functional execution context.
+    */
+    // Closure
+    // Returning the whole function, will return the whole scope, scope means here lexical scope.
+    /*
+    function makeFunc() {
+      const name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+    */
+
+  </script>
+
+  <script>
+    // real usecase example of closure
+
+    // goal: clicking a button will the background to that color
+
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = "orange" 
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = "green" 
+    // }
+
+    // now challenge is make same for 500 buttons.
+    /*
+    function clickHandler(color) {
+        document.body.style.backgroundColor = `${color}` // this wont work
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+    // it is an issue as already the color is set before clicking the button.
+    // because here onclick want a function, but we gave execution of the function.
+
+    */
+
+    function clickHandler(color) {
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+
+  </script>
+</html>
