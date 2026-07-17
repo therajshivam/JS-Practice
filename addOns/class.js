@@ -19,7 +19,6 @@ class Product{
 
 const salesTax = 0.05;
 
-
 const Product1 = new Product('shirt', 19.99);
 const Product2 = new Product('pants', 22.50);
 const Product3 = new Product('shoes', 30.90);
