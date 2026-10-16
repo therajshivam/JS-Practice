@@ -14,6 +14,7 @@ function findLargestNumber(arr) {
     return largest
 }
 
+
 console.log(findLargestNumber(numbers));
 
 // One edge case to consider later: what should the function do if the array is empty?
