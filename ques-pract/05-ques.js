@@ -7,6 +7,7 @@ const numbers = [12, 7, 20, 3, 18, 9, 14];
 const num2 = [5, 5, 4]                 // 4
 const num3 = [-5, -2, -8]              // -5
 const num4 = [5, 5, 5]                 // null
+const num5 = [10, 10, 8, 12, 12, 9]
  
 function findSecondLargest(arr){
     let largest = arr[0]
@@ -32,4 +33,5 @@ console.log(findSecondLargest(numbers));
 console.log(findSecondLargest(num2));
 console.log(findSecondLargest(num3));
 console.log(findSecondLargest(num4));
+console.log(findSecondLargest(num5));
 
