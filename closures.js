@@ -27,6 +27,8 @@ function createCounter() {
     console.log(`Count increased to ${count}`);
   }
 
+  
+
   function getCount() {
     return count;
   }
